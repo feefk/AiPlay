@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APCapacityView">
+            <connections>
+                <outlet property="viewBg" destination="iN0-l3-epB" id="Hzm-96-tll"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="211"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center.png" translatesAutoresizingMaskIntoConstraints="NO" id="7uK-3F-7Z2">
+                    <rect key="frame" x="0.0" y="0.0" width="213" height="211"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7uK-3F-7Z2" secondAttribute="bottom" id="G9K-rX-HC0"/>
+                <constraint firstItem="7uK-3F-7Z2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WMp-9o-uk9"/>
+                <constraint firstItem="7uK-3F-7Z2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="foj-Lm-y40"/>
+                <constraint firstAttribute="trailing" secondItem="7uK-3F-7Z2" secondAttribute="trailing" id="jxX-uf-v9u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="301.5" y="313.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="center.png" width="856" height="826"/>
+    </resources>
+</document>

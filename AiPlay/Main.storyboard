@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ehz-vb-zho">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="psM-CR-e0l">
+            <objects>
+                <viewController id="ehz-vb-zho" customClass="APMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ScX-ne-ePs"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvx-R6-kf2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="Ei4-w1-G8w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-tj-UG6">
+                                <rect key="frame" x="150" y="28" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="efh-oF-2uM"/>
+                                    <constraint firstAttribute="height" constant="40" id="uqK-z8-mCA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Control"/>
+                                    <segment title="Motion"/>
+                                    <segment title="Setting"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiR-Dz-tLG">
+                                <rect key="frame" x="144" y="562" width="312" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="zr5-fk-EBL"/>
+                                </constraints>
+                                <state key="normal" title="Connect:AiPlay94CD">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnScaningPressed:" destination="ehz-vb-zho" eventType="touchUpInside" id="kRO-x1-Gh9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-Dh-k0A" customClass="APManualDirectionView">
+                                <rect key="frame" x="16" y="88" width="182.5" height="454"/>
+                                <color key="backgroundColor" red="0.080394041492970136" green="1" blue="0.26195293124399155" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjB-ab-74A" customClass="APMoveView">
+                                <rect key="frame" x="401.5" y="88" width="182.5" height="454"/>
+                                <color key="backgroundColor" red="0.98542921847637654" green="0.25895889040125408" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCS-Kg-wBA">
+                                <rect key="frame" x="208.5" y="88" width="183" height="454"/>
+                                <color key="backgroundColor" red="1" green="0.55343356809525279" blue="0.40403236225340455" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WiR-Dz-tLG" firstAttribute="top" secondItem="UCS-Kg-wBA" secondAttribute="bottom" constant="20" id="6EV-IM-Omb"/>
+                            <constraint firstItem="WiR-Dz-tLG" firstAttribute="top" secondItem="eaT-Dh-k0A" secondAttribute="bottom" constant="20" id="7gS-ph-gZK"/>
+                            <constraint firstItem="UCS-Kg-wBA" firstAttribute="width" relation="greaterThanOrEqual" secondItem="eaT-Dh-k0A" secondAttribute="width" multiplier="4:3" id="FrK-ih-xQx"/>
+                            <constraint firstItem="UCS-Kg-wBA" firstAttribute="leading" secondItem="eaT-Dh-k0A" secondAttribute="trailing" constant="10" id="N6h-r4-WjG"/>
+                            <constraint firstItem="UCS-Kg-wBA" firstAttribute="top" secondItem="X9M-tj-UG6" secondAttribute="bottom" constant="20" id="WEP-4q-jmZ"/>
+                            <constraint firstItem="WiR-Dz-tLG" firstAttribute="top" secondItem="RjB-ab-74A" secondAttribute="bottom" constant="20" id="Wr2-Ut-AAy"/>
+                            <constraint firstItem="RjB-ab-74A" firstAttribute="leading" secondItem="UCS-Kg-wBA" secondAttribute="trailing" constant="10" id="d1x-kn-LJK"/>
+                            <constraint firstItem="eaT-Dh-k0A" firstAttribute="leading" secondItem="Ei4-w1-G8w" secondAttribute="leadingMargin" id="e3M-Kz-5i7"/>
+                            <constraint firstAttribute="centerX" secondItem="WiR-Dz-tLG" secondAttribute="centerX" id="gGX-uU-Eas"/>
+                            <constraint firstItem="eaT-Dh-k0A" firstAttribute="top" secondItem="X9M-tj-UG6" secondAttribute="bottom" constant="20" id="hAJ-XZ-YmG"/>
+                            <constraint firstItem="X9M-tj-UG6" firstAttribute="top" secondItem="ScX-ne-ePs" secondAttribute="bottom" constant="8" id="jHT-co-MwU"/>
+                            <constraint firstItem="hvx-R6-kf2" firstAttribute="top" secondItem="WiR-Dz-tLG" secondAttribute="bottom" constant="8" id="lGa-0K-Oe8"/>
+                            <constraint firstAttribute="centerX" secondItem="X9M-tj-UG6" secondAttribute="centerX" id="lpX-o1-GAO"/>
+                            <constraint firstItem="RjB-ab-74A" firstAttribute="width" secondItem="eaT-Dh-k0A" secondAttribute="width" id="usF-Re-kGd"/>
+                            <constraint firstItem="RjB-ab-74A" firstAttribute="top" secondItem="X9M-tj-UG6" secondAttribute="bottom" constant="20" id="wRT-of-Dzv"/>
+                            <constraint firstItem="RjB-ab-74A" firstAttribute="trailing" secondItem="Ei4-w1-G8w" secondAttribute="trailingMargin" id="zkR-wK-cR0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VJE-RC-ZsX"/>
+                    <connections>
+                        <outlet property="btnScaning" destination="WiR-Dz-tLG" id="8RG-7e-3AZ"/>
+                        <outlet property="uiSegmentedControlTop" destination="X9M-tj-UG6" id="037-lO-qO2"/>
+                        <outlet property="viewManualDirection" destination="eaT-Dh-k0A" id="DLd-e5-9Fr"/>
+                        <outlet property="viewMoveView" destination="RjB-ab-74A" id="FxL-5T-a32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h84-La-995" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="-38"/>
+        </scene>
+        <!--BlueToothScanVC-->
+        <scene sceneID="YGR-lc-LzY">
+            <objects>
+                <viewController storyboardIdentifier="APSettingViewControllerSBID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gJB-ug-PGU" userLabel="BlueToothScanVC" customClass="APBlueToothScanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4F0-qK-PaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ZK-DP-VzE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kpV-eN-dop">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XUB-Hp-Fk5">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="561"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-6P-yrU">
+                                <rect key="frame" x="29" y="564" width="102" height="30"/>
+                                <state key="normal" title="Start Scanning">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnScaningPressed:" destination="gJB-ug-PGU" eventType="touchUpInside" id="lRc-NV-iyB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XUB-Hp-Fk5" firstAttribute="top" secondItem="kpV-eN-dop" secondAttribute="topMargin" id="BL4-Kv-P8C"/>
+                            <constraint firstItem="0ZK-DP-VzE" firstAttribute="top" secondItem="a5b-6P-yrU" secondAttribute="bottom" constant="6" id="O2T-P0-qxa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XUB-Hp-Fk5" secondAttribute="bottom" constant="39" id="TuU-Ky-97M"/>
+                            <constraint firstItem="a5b-6P-yrU" firstAttribute="leading" secondItem="kpV-eN-dop" secondAttribute="leadingMargin" constant="13" id="Wox-9I-DQc"/>
+                            <constraint firstItem="XUB-Hp-Fk5" firstAttribute="leading" secondItem="kpV-eN-dop" secondAttribute="leadingMargin" constant="-20" id="hyn-RN-iKF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XUB-Hp-Fk5" secondAttribute="trailing" constant="-20" id="iZ7-Je-wpp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Cars" id="1j4-Vj-5Vt"/>
+                    <connections>
+                        <outlet property="btnScaning" destination="a5b-6P-yrU" id="4Wd-ge-xZI"/>
+                        <outlet property="tableViewPeripheral" destination="XUB-Hp-Fk5" id="aD7-xo-fNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aoj-ls-Mkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="831"/>
+        </scene>
+    </scenes>
+</document>
